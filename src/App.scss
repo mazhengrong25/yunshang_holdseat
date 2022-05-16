@@ -1,0 +1,153 @@
+@import "~antd/dist/antd.css";
+
+.logo {
+  height: 42px;
+  margin: 8px 16px;
+  background: url("./static/logo.png") no-repeat center center;
+  background-size: contain;
+}
+
+.header_main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.trigger {
+  padding: 0 24px;
+  font-size: 18px;
+  line-height: 64px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+.trigger:hover {
+  color: #1890ff;
+}
+
+.site-layout-background {
+  background: #fff;
+}
+.content_main {
+  height: 100%;
+  padding: 10px 24px !important;
+}
+
+.ant-input::placeholder {
+  font-size: 12px;
+}
+
+.ant-btn-success {
+  background-color: #52c41a;
+  border-color: #52c41a;
+  &:hover,
+  &:focus {
+    border-color: #72d83f;
+    background: #72d83f;
+  }
+}
+
+/* 表格样式配置 */
+// 表格行选中
+.select_table_row {
+  background-color: #e6f7ff;
+}
+.ant-table-tbody > .select_table_row:hover > td {
+  background-color: #e6f7ff;
+}
+.config_page {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  .config_page_header {
+    padding: 0 0 5px;
+  }
+  .config_search {
+    .ant-form {
+      .ant-row {
+        margin-bottom: 10px;
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+  .ant-table-wrapper {
+    flex: 1;
+    overflow: hidden;
+    .ant-spin-nested-loading {
+      height: 99%;
+      .ant-spin-container {
+        height: 100%;
+        .ant-table {
+          height: 100%;
+          .ant-table-container {
+            height: 100%;
+            .ant-table-body {
+              height: 100%;
+              &::-webkit-scrollbar {
+                width: 8px;
+                height: 10px;
+              }
+              /* 滚动槽 */
+              &::-webkit-scrollbar-track {
+                background: rgba(0, 0, 0, 0.1);
+                border-radius: 3px;
+                -webkit-border-radius: 3px;
+                -moz-border-radius: 3px;
+                -ms-border-radius: 3px;
+                -o-border-radius: 3px;
+              }
+              /* 滚动条滑块 */
+              &::-webkit-scrollbar-thumb {
+                background: rgba(0, 0, 0, 0.2);
+                border-radius: 3px;
+                -webkit-border-radius: 3px;
+                -moz-border-radius: 3px;
+                -ms-border-radius: 3px;
+                -o-border-radius: 3px;
+                &:hover {
+                  background: rgba(0, 0, 0, 0.3);
+                }
+              }
+            }
+            .ant-table-summary{
+              .ant-table-cell.ant-table-cell-fix-left.ant-table-cell-fix-left-last::after{
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.config_pagination {
+  padding-top: 10px;
+  text-align: right;
+}
+
+// 订单列表
+.config_page.order_info {
+  .config_search {
+    .ant-form-item-label {
+      min-width: 70px;
+    }
+  }
+}
+
+// 详情弹窗
+.infoModal {
+  .ant-modal-body {
+    height: calc(100vh - 105px);
+    .config_page {
+      .config_page_header {
+        display: none;
+      }
+      .config_search {
+        display: none;
+      }
+    }
+  }
+}
